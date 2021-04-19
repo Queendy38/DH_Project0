@@ -1,7 +1,8 @@
 {
     "team": [
         {
-            "name": "Eddie"
+            "name": "Eddie",
+            "attributes" : 5
         }
     ]
 }
