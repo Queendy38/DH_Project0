@@ -2,7 +2,10 @@
     "team": [
         {
             "name": "Eddie",
-            "attributes" : 5
+            "attributes" : { 
+                 "strength" : 5
+
+            }
         }
     ]
 }
