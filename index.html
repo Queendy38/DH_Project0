@@ -9,22 +9,25 @@
     <p id="demo"></p>
 
     <script>
+        //create xmlhttprequest
         var xmlhttp = new XMLHttpRequest();
         var url = "input.json";
 
+        //check status
         xmlhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 var mydata = JSON.parse(this.responseText);
 
-                var name = []; //array for names
+                var nameApp = []; //array to store applicants
+                var nameTeam = []; //array to store member in team
 
-
+                
                 for (var i = 0; i < mydata.team.length; i++) {
                     name.push(mydata.team[i].name);
 
                 }
 
-                document.getElementById('demo').innerHTML = mydata.team[0].attributes[0].strength;
+                document.getElementById('demo').innerHTML = mydata.team[0].attributes;
             }
         };
         
