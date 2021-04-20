@@ -17,6 +17,8 @@
 
           } 
            document.getElementById('demo').innerHTML = mydata.team[0];
+           document.getElementById('demo2').innerHTML = currentTeam;
+
       }
   };
   
