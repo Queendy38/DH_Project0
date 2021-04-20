@@ -50,6 +50,7 @@
 
           console.log("Lists of team members & applicants");
           console.log(JSON.stringify(mydata.team, null, 10));
+          
           //pass mydata to appObj
           appObj = mydata;
       }
