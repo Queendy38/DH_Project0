@@ -91,6 +91,7 @@
       return finalScore.toFixed(2);
   }
   //read iuput from html + exisiting input, show in console
-  //output json in console
+
+  //output scored applicants json in console
   console.log("Scored Applicants")
-  console.log(JSON.stringify(appObj));
+  console.log(JSON.stringify(appObj.scoredApplicants));
