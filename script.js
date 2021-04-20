@@ -41,6 +41,19 @@
   xmlhttp.open("GET", url, true);
   xmlhttp.send();
 
+  //check reload
+
+  var previous = null;
+  var current = null;
+  setInterval(function () {
+      $.getJSON("jsonRest.json", function (json) {
+          current = JSON.stringify(json);
+          if (previous && current && previous !== current) {
+              location.reload();
+          }
+      });
+  }, 2000);
+
 /*function displayValue() {
             var ele = document.getElementsByName('score4');
               
@@ -69,4 +82,5 @@ function confirm(){
 function calculate(it, str, en, spicy){
 
 }
-
+//read iuput from html + exisiting input, show in console
+//output json in console
