@@ -51,19 +51,6 @@
   xmlhttp.open("GET", url, true);
   xmlhttp.send();
 
-
-  /*function displayValue() {
-              var ele = document.getElementsByName('score4');
-                
-              for(i = 0; i < ele.length; i++) {
-                  if(ele[i].checked)
-                  document.getElementById("demo").innerHTML
-                          = "Selected: " +ele[i].value;
-              }
-          }
-  */
-
-  //display a confirm message after adding new applicant
   //score values in json arrays
   function confirm() {
       //document.getElementById('confirmMsg').innerHTML = "Added " + applicantName.value + " as new applicant";
