@@ -1,11 +1,10 @@
-  //create form to get input from users
   //create xmlhttprequest
   var xmlhttp = new XMLHttpRequest();
   var url = "input.json";
-  var scoredApp = [];
-  var score = [];
-  var appObj = [];
-  var mydata;
+  var scoredApp = []; //object with existing applicants info
+  var score = []; //individual score
+  var appObj = []; //new + exisitng applicants info
+  var mydata; //store JSON file
   //check status
   xmlhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
@@ -26,7 +25,6 @@
           }
 
           for (var i = 0; i < mydata.applicants.length; i++) {
-              //mydata.team[0].attributes[0].endurance
               currentAppName.push(mydata.applicants[i].name);
               it.push(mydata.applicants[i].attributes[0].intelligence); //scale to 20% 
               en.push(mydata.applicants[i].attributes[0].endurance); //scale to 40%
