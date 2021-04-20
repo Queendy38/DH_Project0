@@ -18,10 +18,15 @@
           }
 
 
-          submitApp.onclick = function () {
-            document.getElementById('demo').innerHTML = score4.value;
-
-          }
+          function displayValue() {
+            var ele = document.getElementsByName('score4');
+              
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked)
+                document.getElementById("demo").innerHTML
+                        = "Selected: " +ele[i].value;
+            }
+        }
 
       
       }
