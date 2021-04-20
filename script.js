@@ -63,6 +63,7 @@
 */
 
 //display a confirm message after adding new applicant
+//score values in json arrays
 function confirm(){
     //document.getElementById('confirmMsg').innerHTML = "Added " + applicantName.value + " as new applicant";
     var ele = document.getElementsByName('score4');
@@ -72,10 +73,19 @@ function confirm(){
         document.getElementById("demo").innerHTML
                 = "Selected: " +ele[i].value;
     }
+
     document.getElementById('confirmMsg').innerHTML = "Added " + applicantName.value + " as new applicant";
    
 }
+//display team members
+function displayTeam(){
+    document.getElementById('team'),innerHTML = JSON.stringify(mydata.team, null, 10);
+}
+function displayApp(){
+    document.getElementById('team'),innerHTML = JSON.stringify(mydata.team,null, 10);
 
+}
+//calculate score
 function calculate(it, str, en, spicy){
   var score, finalScore;
 
