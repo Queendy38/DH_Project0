@@ -51,8 +51,9 @@
           // document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
           //display team members
 
-          console.log("Lists of team members & applicants");
+          console.log("Lists of team members");
           console.log(JSON.stringify(mydata.team, null, 10));
+          console.log("Lists of applicants");
           console.log(JSON.stringify(mydata.applicants, null, 10));
 
           //pass mydata to appObj
