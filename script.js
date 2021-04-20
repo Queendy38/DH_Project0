@@ -3,6 +3,7 @@
   var url = "input.json";
   var scoredApp = {}; //object with existing applicants info (name + score)
   var score = []; //individual score
+
   //check status
   xmlhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
@@ -36,7 +37,7 @@
 
           //add scored applicants to mydata(JSON)
           for (var i = 0; i < mydata.scoredApplicants.length; i++) {
-              mydata.scoredApplicants.push({
+              scoredApp.push({
                   name: currentAppName[i],
                   score: score[i]
               });
@@ -50,9 +51,9 @@
           //display team members
 
           console.log("Lists of team members");
-          console.log(JSON.stringify(mydata.team, null, 10));
+          console.log(JSON.stringify(scoredApp, null, 4));
           console.log("Lists of applicants");
-          console.log(JSON.stringify(mydata.applicants, null, 10));
+          console.log(JSON.stringify(mydata.applicants, null, 4));
 
 
       }
