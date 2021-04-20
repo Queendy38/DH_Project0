@@ -10,12 +10,19 @@
 
           var currentApp = []; //array to store applicants
           var currentTeamName = []; //array to store member in team
+          
+          //attributes for all applicants
+          var IQ=[]; 
+          var en=[];
+          var strength=[];
+          var spicy=[];
 
           //load content from JSON to array
           for (var i = 0; i < mydata.team.length; i++) {
               currentTeamName.push(mydata.team[i].name);
 
           } 
+          //display data from JSON
            document.getElementById('demo').innerHTML = mydata.team[0].name;
            document.getElementById('demo2').innerHTML = currentTeamName;
 
