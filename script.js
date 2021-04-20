@@ -32,6 +32,8 @@
             }
         }
 */
+
+//display a confirm message after adding new applicant
 function confirm(){
     document.getElementById('confirmMsg').innerHTML = "Added" + applicantName.value;
 }
