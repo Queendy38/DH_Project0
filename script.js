@@ -24,7 +24,7 @@
           for (var i = 0; i < mydata.team.length; i++) {
               currentTeamName.push(mydata.team[i].name);
           } 
-
+         
           for (var i = 0; i < mydata.applicants.length; i++) {
               //mydata.team[0].attributes[0].endurance
             currentAppName.push(mydata.applicants[i].name);
@@ -94,7 +94,7 @@ function calculate(it, str, en, spicy){
   //convert to 0-1 scale
   finalScore = score * (0.2);
 
-  return finalScore;
+  return finalScore.toFixed(2);
 }
 //read iuput from html + exisiting input, show in console
 //output json in console
