@@ -54,5 +54,31 @@
 
 //display a confirm message after adding new applicant
 function confirm(){
+    //document.getElementById('confirmMsg').innerHTML = "Added " + applicantName.value + " as new applicant";
+    var ele = document.getElementsByName('score4');
+              
+    for(i = 0; i < ele.length; i++) {
+        if(ele[i].checked)
+        document.getElementById("demo").innerHTML
+                = "Selected: " +ele[i].value;
+    }
     document.getElementById('confirmMsg').innerHTML = "Added " + applicantName.value + " as new applicant";
+   
 }
+
+function calculate(it, str, en, spicy){
+
+}
+
+/*
+var obj = {a: 123, b: "4 5 6"};
+var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
+
+var a = document.createElement('a');
+a.href = 'data:' + data;
+a.download = 'data.json';
+a.innerHTML = 'download JSON';
+
+var container = document.getElementById('container');
+container.appendChild(a);
+*/
