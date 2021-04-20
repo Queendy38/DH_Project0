@@ -33,6 +33,8 @@
 
         //display data from JSON
         //document.getElementById('demo2').innerHTML = IQ[1] + en[1] + strength[1] + spicy[1];
+        document.getElementById('demo2').innerHTML = currentAppName;
+
         document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
 
 
