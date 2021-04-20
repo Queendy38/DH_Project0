@@ -50,9 +50,11 @@
 
           console.log("Lists of team members & applicants");
           console.log(JSON.stringify(mydata.team, null, 10));
-          
+          console.log(JSON.stringify(mydata.applicants, null, 10));
+
           //pass mydata to appObj
           appObj = mydata;
+          scoredApp = scoredApplicants;
       }
   };
 
@@ -95,4 +97,4 @@
 
   //output scored applicants json in console
   console.log("Scored Applicants")
-  console.log(JSON.stringify(appObj.scoredApplicants));
+  console.log(JSON.stringify(appObj.scoredApp));
