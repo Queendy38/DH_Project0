@@ -36,7 +36,7 @@
           }
 
           //add scored applicants to mydata(JSON)
-          for (var i = 0; i < mydata.scoredApplicants.length; i++) {
+          for (var i = 0; i < it.length; i++) {
               scoredApp.push({
                   name: currentAppName[i],
                   score: score[i]
