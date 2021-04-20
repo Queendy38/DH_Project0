@@ -21,6 +21,7 @@
           for (var i = 0; i < mydata.team.length; i++) {
               currentTeamName.push(mydata.team[i].name);
           } 
+
           for (var i = 0; i < mydata.applicants.length; i++) {
             currentAppName.push(mydata.applicants[i].name);
             IQ.push(mydata.applicants[i].attributes[i].intelligence);
