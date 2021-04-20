@@ -3,12 +3,10 @@
   var url = "input.json";
   var scoredApp = []; //object with existing applicants info (name + score)
   var score = []; //individual score
-  var appObj; //copy of mydata 
-  var mydata; //store JSON file
   //check status
   xmlhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-          mydata = JSON.parse(this.responseText);
+          var mydata = JSON.parse(this.responseText);
 
           var currentAppName = []; //array to store applicants
           var currentTeamName = []; //array to store member in team
