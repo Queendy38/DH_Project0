@@ -70,15 +70,3 @@ function calculate(it, str, en, spicy){
 
 }
 
-/*
-var obj = {a: 123, b: "4 5 6"};
-var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
-
-var a = document.createElement('a');
-a.href = 'data:' + data;
-a.download = 'data.json';
-a.innerHTML = 'download JSON';
-
-var container = document.getElementById('container');
-container.appendChild(a);
-*/
