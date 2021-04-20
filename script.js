@@ -28,9 +28,7 @@
             strength.push(mydata.applicants[i].attributes[i].strength);
             spicy.push(mydata.applicants[i].attributes[i].spicyFoodTolerance);
         } 
-          //display data from JSON
-           document.getElementById('demo').innerHTML = IQ[0] + en[0] + strength[0] + spicy[0];
-           document.getElementById('demo2').innerHTML = IQ[1] + en[1] + strength[1] + spicy[1];
+         
 
       }
   };
@@ -54,3 +52,6 @@ function confirm(){
     document.getElementById('confirmMsg').innerHTML = "Added " + applicantName.value + " as new applicant";
 }
 
+ //display data from JSON
+           document.getElementById('demo').innerHTML = IQ[0] + en[0] + strength[0] + spicy[0];
+           document.getElementById('demo2').innerHTML = IQ[1] + en[1] + strength[1] + spicy[1];
