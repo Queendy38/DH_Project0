@@ -39,18 +39,11 @@
           // mydata.applicants.push({name: "yolo", attributes: {strength:strength[0]}});
           //display data from JSON
           //document.getElementById('demo').innerHTML = JSON.stringify(mydata);
-          document.getElementById('demo2').innerHTML = score;
+          //document.getElementById('demo2').innerHTML = score;
 
           // document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
           //display team members
-          function displayTeam() {
-              document.getElementById('team'), innerHTML = JSON.stringify(mydata.team, null, 10);
-          }
 
-          function displayApp() {
-              document.getElementById('team'), innerHTML = JSON.stringify(mydata.team, null, 10);
-
-          }
           console.log("current team members");
           console.log(JSON.stringify(mydata, null, 10));
       }
@@ -86,6 +79,14 @@
 
   }
 
+  function displayTeam() {
+      document.getElementById('team'), innerHTML = JSON.stringify(mydata.team, null, 10);
+  }
+
+  function displayApp() {
+      document.getElementById('team'), innerHTML = JSON.stringify(mydata.team, null, 10);
+
+  }
   //calculate score
   function calculate(it, str, en, spicy) {
       var score, finalScore;
