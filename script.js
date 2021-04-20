@@ -56,9 +56,7 @@
           console.log("Lists of applicants");
           console.log(JSON.stringify(mydata.applicants, null, 10));
 
-          //pass mydata to appObj
-          appObj = mydata;
-          scoredApp = mydata.scoredApplicants;
+
       }
   };
 
