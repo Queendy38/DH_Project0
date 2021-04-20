@@ -12,7 +12,7 @@
           var currentTeamName = []; //array to store member in team
 
           //attributes for all applicants
-          var IQ=[]; 
+          var it=[]; 
           var en=[];
           var strength=[];
           var spicy=[];
@@ -24,12 +24,12 @@
 
           for (var i = 0; i < mydata.applicants.length; i++) {
             currentAppName.push(mydata.applicants[i].name);
-            IQ.push(mydata.applicants[i].attributes[i].intelligence);
+            it.push(mydata.team[i].attributes[i].intelligence);
             en.push(mydata.applicants[i].attributes[i].endurance);
             strength.push(mydata.applicants[i].attributes[i].strength);
             spicy.push(mydata.applicants[i].attributes[i].spicyFoodTolerance);
         } 
-        
+
         //display data from JSON
         //document.getElementById('demo2').innerHTML = IQ[1] + en[1] + strength[1] + spicy[1];
         document.getElementById('demo').innerHTML = IQ[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
