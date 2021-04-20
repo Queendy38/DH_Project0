@@ -2,11 +2,16 @@
   //create xmlhttprequest
   var xmlhttp = new XMLHttpRequest();
   var url = "input.json";
-
+  var mydata;
   //check status
   xmlhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-          var mydata = JSON.parse(this.responseText);
+         mydata = JSON.parse(this.responseText);
+      }
+  };
+  
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
 
           var currentAppName = []; //array to store applicants
           var currentTeamName = []; //array to store member in team
@@ -38,11 +43,7 @@
         //document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
 
 
-      }
-  };
-  
-  xmlhttp.open("GET", url, true);
-  xmlhttp.send();
+
 
 
 /*function displayValue() {
