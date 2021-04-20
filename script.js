@@ -10,7 +10,7 @@
 
           var currentApp = []; //array to store applicants
           var currentTeamName = []; //array to store member in team
-          
+
           //attributes for all applicants
           var IQ=[]; 
           var en=[];
@@ -47,3 +47,4 @@
 function confirm(){
     document.getElementById('confirmMsg').innerHTML = "Added " + applicantName.value + " as new applicant";
 }
+
