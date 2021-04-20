@@ -27,7 +27,7 @@
           for (var i = 0; i < mydata.applicants.length; i++) {
               //mydata.team[0].attributes[0].endurance
             currentAppName.push(mydata.applicants[i].name);
-            it.push(mydata.applicants[i].attributes[0].intelligence); //scale to 30% 
+            it.push(mydata.applicants[i].attributes[0].intelligence); //scale to 20% 
             en.push(mydata.applicants[i].attributes[0].endurance); //scale to 30%
             strength.push(mydata.applicants[i].attributes[0].strength); //scale to 30%
             spicy.push(mydata.applicants[i].attributes[0].spicyFoodTolerance); //scale to 10%
