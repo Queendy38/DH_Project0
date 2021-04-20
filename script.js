@@ -43,7 +43,7 @@
           // document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
           //display team members
 
-          console.log("current team members");
+          console.log("Lists of team members & applicants");
           console.log(JSON.stringify(mydata, null, 10));
       }
   };
@@ -87,4 +87,5 @@
   //read iuput from html + exisiting input, show in console
   //output json in console
   appObj.push(scoredApp);
+  console.log("Scored Applicants")
   console.log(JSON.stringify(scoredApp));
