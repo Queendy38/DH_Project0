@@ -54,7 +54,7 @@
 
           //pass mydata to appObj
           appObj = mydata;
-          scoredApp = scoredApplicants;
+          scoredApp = appObj.scoredApplicants;
       }
   };
 
