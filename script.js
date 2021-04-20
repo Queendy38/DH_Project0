@@ -1,7 +1,7 @@
   //create xmlhttprequest
   var xmlhttp = new XMLHttpRequest();
   var url = "input.json";
-  var scoredApp = {}; //object with existing applicants info (name + score)
+  var scoredApp =[]; //object with existing applicants info (name + score)
   var score = []; //individual score
 
   //check status
