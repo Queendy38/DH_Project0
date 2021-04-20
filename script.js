@@ -23,6 +23,7 @@
           } 
 
           for (var i = 0; i < mydata.applicants.length; i++) {
+              //mydata.team[0].attributes[0].endurance
             currentAppName.push(mydata.applicants[i].name);
             it.push(mydata.team[i].attributes[i].intelligence);
             en.push(mydata.team[i].attributes[i].endurance);
@@ -32,7 +33,7 @@
 
         //display data from JSON
         //document.getElementById('demo2').innerHTML = IQ[1] + en[1] + strength[1] + spicy[1];
-        document.getElementById('demo').innerHTML = It[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
+        document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
 
 
       }
