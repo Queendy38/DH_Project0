@@ -26,7 +26,7 @@
               //mydata.team[0].attributes[0].endurance
             currentAppName.push(mydata.team[i].name);
             //it.push(mydata.team[i].attributes[i].intelligence);
-            en.push(mydata.team[i].attributes[i].endurance);
+           // en.push(mydata.team[i].attributes[i].endurance);
            // strength.push(mydata.team[i].attributes[i].strength);
            // spicy.push(mydata.team[i].attributes[i].spicyFoodTolerance);
         } 
@@ -35,7 +35,7 @@
         //document.getElementById('demo2').innerHTML = IQ[1] + en[1] + strength[1] + spicy[1];
         document.getElementById('demo2').innerHTML = currentAppName;
 
-        document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
+        //document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
 
 
       }
