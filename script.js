@@ -100,4 +100,4 @@
   //read iuput from html + exisiting input, show in console
   //output json in console
   appObj.push(scoredApp);
-  console.log(JSON.stringify(appObj));
+  console.log(JSON.stringify(scoredApp));
