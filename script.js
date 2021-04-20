@@ -3,7 +3,7 @@
   var url = "input.json";
   var scoredApp = []; //object with existing applicants info (name + score)
   var score = []; //individual score
-  var appObj = []; //new + exisitng applicants info
+  var appObj; //copy of mydata 
   var mydata; //store JSON file
   //check status
   xmlhttp.onreadystatechange = function () {
@@ -33,7 +33,12 @@
 
               //calculate score
               score.push(calculate(it[i], strength[i], en[i], spicy[i]));
-              scoredApp.push({name: currentAppName[i], score: score[i]});
+              //scoredApp.push({name: currentAppName[i], score: score[i]});
+          }
+
+          //add scored applicants to mydata(JSON)
+          for (var i = 0; i < mydata.scoredApplicants.length; i++) {
+             mydata.scoredApplicants.push({name: currentAppName[i], score: score[i]});
           }
           // mydata.applicants.push({name: "yolo", attributes: {strength:strength[0]}});
           //display data from JSON
@@ -45,6 +50,8 @@
 
           console.log("Lists of team members & applicants");
           console.log(JSON.stringify(mydata.team, null, 10));
+          //pass mydata to appObj
+          appObj = mydata;
       }
   };
 
@@ -85,6 +92,5 @@
   }
   //read iuput from html + exisiting input, show in console
   //output json in console
-  appObj.push(scoredApp);
   console.log("Scored Applicants")
-  console.log(JSON.stringify(scoredApp));
+  console.log(JSON.stringify(appObj));
