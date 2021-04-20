@@ -17,7 +17,7 @@
 
           } 
 
-          //document.getElementById('demo').innerHTML = currentTeam;
+          console.log(currentTeam);
       }
   };
   
