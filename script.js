@@ -32,12 +32,12 @@
             strength.push(mydata.applicants[i].attributes[0].strength); //scale to 30%
             spicy.push(mydata.applicants[i].attributes[0].spicyFoodTolerance); //scale to 10%
         } 
-         mydata.applicants[0].name = "Hello";
+         mydata.applicants.push({name: "yolo", attributes: {strength:strength[0]}});
         //display data from JSON
         document.getElementById('demo').innerHTML = JSON.stringify(mydata);
         document.getElementById('demo2').innerHTML = currentAppName[0];
         console.log("current team members");
-        console.log(JSON.stringify(mydata, null, 4));
+        console.log(JSON.stringify(mydata, null, 10));
         
        // document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
 
