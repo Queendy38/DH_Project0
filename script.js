@@ -23,14 +23,14 @@
           } 
           for (var i = 0; i < mydata.applicants.length; i++) {
             currentAppName.push(mydata.applicants[i].name);
-            IQ.push();
-            en.push();
-            strength.push();
-            spicy.push();
+            IQ.push(mydata.applicants[i].attributes[i].intelligence);
+            en.push(mydata.applicants[i].attributes[i].endurance);
+            strength.push(mydata.applicants[i].attributes[i].strength);
+            spicy.push(mydata.applicants[i].attributes[i].spicyFoodTolerance);
         } 
           //display data from JSON
-           document.getElementById('demo').innerHTML = mydata.team[0].name;
-           document.getElementById('demo2').innerHTML = currentTeamName;
+           document.getElementById('demo').innerHTML = IQ[0] + en[0] + strength[0] + spicy[0];
+           document.getElementById('demo2').innerHTML = IQ[1] + en[] + strength[1] + spicy[1];
 
       }
   };
