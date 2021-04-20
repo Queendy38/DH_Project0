@@ -28,7 +28,7 @@
         }
     ],
 
-    "Applicants": [{
+    "applicants": [{
             "name": "Amy",
             "attributes": [{
                 "intelligence": 1,

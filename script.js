@@ -8,7 +8,7 @@
       if (this.readyState == 4 && this.status == 200) {
           var mydata = JSON.parse(this.responseText);
 
-          var currentApp = []; //array to store applicants
+          var currentAppName = []; //array to store applicants
           var currentTeamName = []; //array to store member in team
 
           //attributes for all applicants
@@ -20,8 +20,14 @@
           //load content from JSON to array
           for (var i = 0; i < mydata.team.length; i++) {
               currentTeamName.push(mydata.team[i].name);
-
           } 
+          for (var i = 0; i < mydata.applicants.length; i++) {
+            currentAppName.push(mydata.applicants[i].name);
+            IQ.push();
+            en.push();
+            strength.push();
+            spicy.push();
+        } 
           //display data from JSON
            document.getElementById('demo').innerHTML = mydata.team[0].name;
            document.getElementById('demo2').innerHTML = currentTeamName;
