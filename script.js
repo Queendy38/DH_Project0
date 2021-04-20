@@ -57,7 +57,7 @@
 
           //pass mydata to appObj
           appObj = mydata;
-          scoredApp = appObj.scoredApplicants;
+          scoredApp = mydata.scoredApplicants;
       }
   };
 
@@ -93,7 +93,7 @@
 
   //output scored applicants json in console
   console.log("Scored Applicants")
-  console.log(JSON.stringify(appObj.scoredApp));
+  console.log(JSON.stringify(scoredApp));
 
   /*//click to display info from JSON
   function displayTeam() {
