@@ -30,7 +30,7 @@
         } 
           //display data from JSON
            document.getElementById('demo').innerHTML = IQ[0] + en[0] + strength[0] + spicy[0];
-           document.getElementById('demo2').innerHTML = IQ[1] + en[] + strength[1] + spicy[1];
+           document.getElementById('demo2').innerHTML = IQ[1] + en[1] + strength[1] + spicy[1];
 
       }
   };
