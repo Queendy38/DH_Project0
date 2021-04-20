@@ -22,13 +22,13 @@
               currentTeamName.push(mydata.team[i].name);
           } 
 
-          for (var i = 0; i < mydata.applicants.length; i++) {
+          for (var i = 0; i < mydata.team.length; i++) {
               //mydata.team[0].attributes[0].endurance
-            currentAppName.push(mydata.applicants[i].name);
-            //it.push(mydata.team[i].attributes[i].intelligence);
+            currentAppName.push(mydata.team[i].name);
+            it.push(mydata.team[i].attributes[i].intelligence);
             en.push(mydata.team[i].attributes[i].endurance);
-            strength.push(mydata.team[i].attributes[i].strength);
-            spicy.push(mydata.team[i].attributes[i].spicyFoodTolerance);
+           // strength.push(mydata.team[i].attributes[i].strength);
+           // spicy.push(mydata.team[i].attributes[i].spicyFoodTolerance);
         } 
 
         //display data from JSON
