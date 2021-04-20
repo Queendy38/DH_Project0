@@ -25,10 +25,10 @@
           for (var i = 0; i < mydata.applicants.length; i++) {
               //mydata.team[0].attributes[0].endurance
             currentAppName.push(mydata.applicants[i].name);
-            it.push(mydata.team[i].attributes[0].intelligence);
-            en.push(mydata.team[i].attributes[0].endurance);
-            strength.push(mydata.team[i].attributes[0].strength);
-            spicy.push(mydata.team[i].attributes[0].spicyFoodTolerance);
+            it.push(mydata.applicants[i].attributes[0].intelligence);
+            en.push(mydata.applicants[i].attributes[0].endurance);
+            strength.push(mydata.applicants[i].attributes[0].strength);
+            spicy.push(mydata.applicants[i].attributes[0].spicyFoodTolerance);
         } 
 
         //display data from JSON
