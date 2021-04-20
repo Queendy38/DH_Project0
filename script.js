@@ -17,7 +17,7 @@
 
           }
 
-          document.getElementById('').innerHTML = JSON.stringify(mydata);
+          document.getElementById('demo').innerHTML = mydata.team[0].attributes[0].endurance;
 
       
       }
