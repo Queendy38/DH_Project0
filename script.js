@@ -15,18 +15,14 @@
           for (var i = 0; i < mydata.team.length; i++) {
               nameApp.push(mydata.team[i].name);
 
-          }
-
-
-          
-      
+          } 
       }
   };
   
   xmlhttp.open("GET", url, true);
   xmlhttp.send();
-  
-function displayValue() {
+
+/*function displayValue() {
             var ele = document.getElementsByName('score4');
               
             for(i = 0; i < ele.length; i++) {
@@ -35,3 +31,7 @@ function displayValue() {
                         = "Selected: " +ele[i].value;
             }
         }
+*/
+function confirm(){
+    document.getElementById('confirmMsg').innerHTML = "Added" + applicantName.value;
+}
