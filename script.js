@@ -90,9 +90,6 @@
   }
   //read iuput from html + exisiting input, show in console
 
-  //output scored applicants json in console
-  console.log("Scored Applicants")
-  console.log(JSON.stringify(scoredApp));
 
   /*//click to display info from JSON
   function displayTeam() {
