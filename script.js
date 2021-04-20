@@ -38,7 +38,10 @@
 
           //add scored applicants to mydata(JSON)
           for (var i = 0; i < mydata.scoredApplicants.length; i++) {
-             mydata.scoredApplicants.push({name: currentAppName[i], score: score[i]});
+              mydata.scoredApplicants.push({
+                  name: currentAppName[i],
+                  score: score[i]
+              });
           }
           // mydata.applicants.push({name: "yolo", attributes: {strength:strength[0]}});
           //display data from JSON
@@ -74,14 +77,7 @@
 
   }
 
-  function displayTeam() {
-      document.getElementById('team'), innerHTML = JSON.stringify(mydata.team, null, 10);
-  }
 
-  function displayApp() {
-      document.getElementById('team'), innerHTML = JSON.stringify(mydata.team, null, 10);
-
-  }
   //calculate score
   function calculate(it, str, en, spicy) {
       var score, finalScore;
@@ -91,10 +87,20 @@
       //convert to 0-1 scale
       finalScore = score * (0.2);
 
-      return finalScore.toFixed(2);
+      return finalScore.toFixed(2); //fix to 2 decimal places
   }
   //read iuput from html + exisiting input, show in console
 
   //output scored applicants json in console
   console.log("Scored Applicants")
   console.log(JSON.stringify(appObj.scoredApp));
+
+  /*//click to display info from JSON
+  function displayTeam() {
+      document.getElementById('team'), innerHTML = JSON.stringify(appObj.scoredApp, null, 10);
+  }
+
+  function displayApp() {
+      document.getElementById('app'), innerHTML = JSON.stringify(appObj.team, null, 10);
+
+  }*/
