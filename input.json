@@ -55,7 +55,9 @@
                 "spicyFoodTolerance": 2
             }]
         }
-    ]
+    ],
+
+    "scoredApplicants":[]
 
 
 }

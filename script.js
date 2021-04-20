@@ -44,7 +44,7 @@
           //display team members
 
           console.log("Lists of team members & applicants");
-          console.log(JSON.stringify(mydata, null, 10));
+          console.log(JSON.stringify(mydata.team, null, 10));
       }
   };
 
@@ -53,7 +53,6 @@
 
   //score values in json arrays
   function confirm() {
-      //document.getElementById('confirmMsg').innerHTML = "Added " + applicantName.value + " as new applicant";
       var ele = document.getElementsByName('score4');
 
       for (i = 0; i < ele.length; i++) {
