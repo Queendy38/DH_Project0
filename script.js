@@ -32,10 +32,10 @@
         } 
 
         //display data from JSON
-        //document.getElementById('demo2').innerHTML = IQ[1] + en[1] + strength[1] + spicy[1];
+        document.getElementById('demo').innerHTML = calculate(it[0],en[0],strength[0],spicy[0]);
         document.getElementById('demo2').innerHTML = currentAppName[0];
 
-        document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
+       // document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
 
 
       }
@@ -71,7 +71,11 @@ function confirm(){
 }
 
 function calculate(it, str, en, spicy){
+  var score;
 
+  score = it + str + en + spicy;
+
+  return score;
 }
 //read iuput from html + exisiting input, show in console
 //output json in console
