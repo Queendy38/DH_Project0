@@ -5,10 +5,11 @@
   var scoredApp = [];
   var score = [];
   var appObj=[];
+  var mydata;
   //check status
   xmlhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-          var mydata = JSON.parse(this.responseText);
+          mydata = JSON.parse(this.responseText);
 
           var currentAppName = []; //array to store applicants
           var currentTeamName = []; //array to store member in team
@@ -33,15 +34,13 @@
             spicy.push(mydata.applicants[i].attributes[0].spicyFoodTolerance); //scale to 10%
 
             //calculate score
-            score.push(calculate(it[i],str[i],en[i],spicy[i]));
+            score.push(calculate(it[i],strength[i],en[i],spicy[i]));
         } 
         // mydata.applicants.push({name: "yolo", attributes: {strength:strength[0]}});
         //display data from JSON
         //document.getElementById('demo').innerHTML = JSON.stringify(mydata);
         document.getElementById('demo2').innerHTML = score;
-        console.log("current team members");
-        console.log(JSON.stringify(mydata, null, 10));
-        
+
        // document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
 
 
@@ -89,3 +88,6 @@ function calculate(it, str, en, spicy){
 }
 //read iuput from html + exisiting input, show in console
 //output json in console
+    console.log("current team members");
+    console.log(JSON.stringify(mydata, null, 10));
+        
