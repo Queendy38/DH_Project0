@@ -9,15 +9,15 @@
           var mydata = JSON.parse(this.responseText);
 
           var currentApp = []; //array to store applicants
-          var currentTeam = []; //array to store member in team
+          var currentTeamName = []; //array to store member in team
 
           //load content from JSON to array
           for (var i = 0; i < mydata.team.length; i++) {
-              currentTeam.push(mydata.team[i]);
+              currentTeamName.push(mydata.team[i].name);
 
           } 
-           document.getElementById('demo').innerHTML = mydata.team[0];
-           document.getElementById('demo2').innerHTML = currentTeam;
+           document.getElementById('demo').innerHTML = mydata.team[0].name;
+           document.getElementById('demo2').innerHTML = currentTeamName;
 
       }
   };
