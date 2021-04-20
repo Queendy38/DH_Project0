@@ -37,7 +37,7 @@
         document.getElementById('demo').innerHTML = JSON.stringify(mydata);
         document.getElementById('demo2').innerHTML = currentAppName[0];
         console.log("current team members");
-        console.log(JSON.stringify(mydata, null, 2));
+        console.log(JSON.stringify(mydata, null, 4));
         mydata.applicants[0].name = "Hello";
        // document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
 
