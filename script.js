@@ -1,7 +1,7 @@
   //create xmlhttprequest
   var xmlhttp = new XMLHttpRequest();
   var url = "input.json";
-  var scoredApp = []; //object with existing applicants info
+  var scoredApp = []; //object with existing applicants info (name + score)
   var score = []; //individual score
   var appObj = []; //new + exisitng applicants info
   var mydata; //store JSON file
@@ -33,6 +33,7 @@
 
               //calculate score
               score.push(calculate(it[i], strength[i], en[i], spicy[i]));
+              scoredApp.push({name: currentAppName[i], score: score[i]});
           }
           // mydata.applicants.push({name: "yolo", attributes: {strength:strength[0]}});
           //display data from JSON
