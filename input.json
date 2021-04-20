@@ -1,14 +1,61 @@
 {
     "team": [{
-        "name": "Eddie",
-        "attributes": [{
-             "intelligence" : 5,
-             "strength" : 3,
-             "endurance" : 2,
-             "spicyFoodTolerance" : 1
-        }]
+            "name": "Eddie",
+            "attributes": [{
+                "intelligence": 5,
+                "strength": 3,
+                "endurance": 2,
+                "spicyFoodTolerance": 1
+            }]
+        },
+        {
+            "name": "Eddie",
+            "attributes": [{
+                "intelligence": 5,
+                "strength": 3,
+                "endurance": 2,
+                "spicyFoodTolerance": 1
+            }]
+        },
+        {
+            "name": "Eddie",
+            "attributes": [{
+                "intelligence": 5,
+                "strength": 3,
+                "endurance": 2,
+                "spicyFoodTolerance": 1
+            }]
+        }
+    ],
+
+    "Applicants": [{
+            "name": "Eddie",
+            "attributes": [{
+                "intelligence": 5,
+                "strength": 3,
+                "endurance": 2,
+                "spicyFoodTolerance": 1
+            }]
+        },
+        {
+            "name": "Eddie",
+            "attributes": [{
+                "intelligence": 5,
+                "strength": 3,
+                "endurance": 2,
+                "spicyFoodTolerance": 1
+            }]
+        },
+        {
+            "name": "Eddie",
+            "attributes": [{
+                "intelligence": 5,
+                "strength": 3,
+                "endurance": 2,
+                "spicyFoodTolerance": 1
+            }]
+        }
+    ]
 
 
-
-    }]
 }
