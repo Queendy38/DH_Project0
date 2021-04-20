@@ -2,40 +2,26 @@
 <html>
 
 <head>
+    <style>
+
+
+    </style>
 </head>
 
 <body>
      
-    <p id="demo"></p>
+    
+<form>
+  Username:<br>
+  <input type="text" name="username">
+  <br>
+  Email id:<br>
+  <input type="text" name="email_id">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
 
-    <script>
-        //create xmlhttprequest
-        var xmlhttp = new XMLHttpRequest();
-        var url = "input.json";
-
-        //check status
-        xmlhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                var mydata = JSON.parse(this.responseText);
-
-                var nameApp = []; //array to store applicants
-                var nameTeam = []; //array to store member in team
-
-                
-                for (var i = 0; i < mydata.team.length; i++) {
-                    nameApp.push(mydata.team[i].name);
-
-                }
-
-                document.getElementById('demo').innerHTML = JSON.stringify(mydata);
-            }
-        };
-        
-        xmlhttp.open("GET", url, true);
-        xmlhttp.send();
-  
-    </script>
-
+<script src="script.js"></script>
 
 </body>
 
