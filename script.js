@@ -2,7 +2,9 @@
   //create xmlhttprequest
   var xmlhttp = new XMLHttpRequest();
   var url = "input.json";
-
+  var scoredApp = [];
+  var score = [];
+  var appObj=[];
   //check status
   xmlhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
@@ -25,16 +27,17 @@
           for (var i = 0; i < mydata.applicants.length; i++) {
               //mydata.team[0].attributes[0].endurance
             currentAppName.push(mydata.applicants[i].name);
-            it.push(mydata.applicants[i].attributes[0].intelligence);
-            en.push(mydata.applicants[i].attributes[0].endurance);
-            strength.push(mydata.applicants[i].attributes[0].strength);
-            spicy.push(mydata.applicants[i].attributes[0].spicyFoodTolerance);
+            it.push(mydata.applicants[i].attributes[0].intelligence); //scale to 30% 
+            en.push(mydata.applicants[i].attributes[0].endurance); //scale to 30%
+            strength.push(mydata.applicants[i].attributes[0].strength); //scale to 30%
+            spicy.push(mydata.applicants[i].attributes[0].spicyFoodTolerance); //scale to 10%
         } 
-
+         
         //display data from JSON
         document.getElementById('demo').innerHTML = calculate(it[0],en[0],strength[0],spicy[0]);
         document.getElementById('demo2').innerHTML = currentAppName[0];
-
+        console.log("current team members");
+        console.log(mydata);
        // document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
 
 
