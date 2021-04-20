@@ -9,18 +9,18 @@
             }]
         },
         {
-            "name": "Eddie",
+            "name": "Tom",
             "attributes": [{
-                "intelligence": 5,
-                "strength": 3,
-                "endurance": 2,
+                "intelligence": 2,
+                "strength": 2,
+                "endurance": 1,
                 "spicyFoodTolerance": 1
             }]
         },
         {
-            "name": "Eddie",
+            "name": "Chris",
             "attributes": [{
-                "intelligence": 5,
+                "intelligence": 4,
                 "strength": 3,
                 "endurance": 2,
                 "spicyFoodTolerance": 1
@@ -29,30 +29,30 @@
     ],
 
     "Applicants": [{
-            "name": "Eddie",
+            "name": "Amy",
+            "attributes": [{
+                "intelligence": 1,
+                "strength": 2,
+                "endurance": 3,
+                "spicyFoodTolerance": 5
+            }]
+        },
+        {
+            "name": "Bob",
             "attributes": [{
                 "intelligence": 5,
-                "strength": 3,
+                "strength": 5,
                 "endurance": 2,
                 "spicyFoodTolerance": 1
             }]
         },
         {
-            "name": "Eddie",
+            "name": "Nancy",
             "attributes": [{
-                "intelligence": 5,
+                "intelligence": 2,
                 "strength": 3,
-                "endurance": 2,
-                "spicyFoodTolerance": 1
-            }]
-        },
-        {
-            "name": "Eddie",
-            "attributes": [{
-                "intelligence": 5,
-                "strength": 3,
-                "endurance": 2,
-                "spicyFoodTolerance": 1
+                "endurance": 1,
+                "spicyFoodTolerance": 2
             }]
         }
     ]
