@@ -34,7 +34,7 @@
         } 
          
         //display data from JSON
-        document.getElementById('demo').innerHTML = calculate(it[0],en[0],strength[0],spicy[0]);
+        document.getElementById('demo').innerHTML = mydata;
         document.getElementById('demo2').innerHTML = currentAppName[0];
         console.log("current team members");
         console.log(mydata);
