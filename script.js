@@ -31,11 +31,14 @@
             en.push(mydata.applicants[i].attributes[0].endurance); //scale to 40%
             strength.push(mydata.applicants[i].attributes[0].strength); //scale to 30%
             spicy.push(mydata.applicants[i].attributes[0].spicyFoodTolerance); //scale to 10%
+
+            //calculate score
+            score.push(calculate(it[i],str[i],en[i],spicy[i]));
         } 
-         mydata.applicants.push({name: "yolo", attributes: {strength:strength[0]}});
+        // mydata.applicants.push({name: "yolo", attributes: {strength:strength[0]}});
         //display data from JSON
-        document.getElementById('demo').innerHTML = JSON.stringify(mydata);
-        document.getElementById('demo2').innerHTML = currentAppName[0];
+        //document.getElementById('demo').innerHTML = JSON.stringify(mydata);
+        document.getElementById('demo2').innerHTML = score;
         console.log("current team members");
         console.log(JSON.stringify(mydata, null, 10));
         
