@@ -18,7 +18,15 @@
           }
 
 
-          function displayValue() {
+          
+      
+      }
+  };
+  
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
+  
+function displayValue() {
             var ele = document.getElementsByName('score4');
               
             for(i = 0; i < ele.length; i++) {
@@ -27,10 +35,3 @@
                         = "Selected: " +ele[i].value;
             }
         }
-
-      
-      }
-  };
-  
-  xmlhttp.open("GET", url, true);
-  xmlhttp.send();
