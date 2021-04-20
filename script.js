@@ -17,7 +17,11 @@
 
           }
 
-          document.getElementById('demo').innerHTML = mydata.team[0].attributes[0].endurance;
+
+          submitApp.onclick = function () {
+            document.getElementById('demo').innerHTML = score4.value;
+
+          }
 
       
       }
