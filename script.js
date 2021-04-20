@@ -16,8 +16,7 @@
               currentTeam.push(mydata.team[i]);
 
           } 
-
-          console.log(currentTeam);
+           document.getElementById('demo').innerHTML = mydata;
       }
   };
   
