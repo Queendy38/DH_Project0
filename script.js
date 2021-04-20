@@ -24,7 +24,7 @@
 
           for (var i = 0; i < mydata.applicants.length; i++) {
               //mydata.team[0].attributes[0].endurance
-            currentAppName.push(mydata.applicants[i].name);
+            currentAppName.push(mydata.applicants[i].attributes[i].strength);
             //it.push(mydata.team[i].attributes[i].intelligence);
            // en.push(mydata.team[i].attributes[i].endurance);
            // strength.push(mydata.team[i].attributes[i].strength);
