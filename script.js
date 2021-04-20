@@ -41,7 +41,7 @@
       }
   };
   
-  xmlhttp.open("GET", url, false);
+  xmlhttp.open("GET", url, true);
   xmlhttp.send();
 
 
