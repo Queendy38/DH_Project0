@@ -10,7 +10,7 @@
 
     <script>
         //create xmlhttprequest
-        var xmlhttp = new XMLHttpRequest();
+       /* var xmlhttp = new XMLHttpRequest();
         var url = "input.json";
 
         //check status
@@ -32,7 +32,14 @@
         };
         
         xmlhttp.open("GET", url, true);
-        xmlhttp.send();
+        xmlhttp.send();*/
+  
+
+const fs = require('fs');
+
+let rawdata = fs.readFileSync('input.json');
+let student = JSON.parse(rawdata);
+console.log(student);
         
     </script>
 
