@@ -8,14 +8,15 @@
       if (this.readyState == 4 && this.status == 200) {
           var mydata = JSON.parse(this.responseText);
 
-          var nameApp = []; //array to store applicants
-          var nameTeam = []; //array to store member in team
+          var currentApp = []; //array to store applicants
+          var currentTeam = []; //array to store member in team
 
           //load content from JSON to array
           for (var i = 0; i < mydata.team.length; i++) {
-              nameApp.push(mydata.team[i].name);
+              currentTeam.push(mydata.team[i]);
 
           } 
+          document.getElementById('demo').innerHTML = currentTeam;
       }
   };
   
@@ -35,5 +36,5 @@
 
 //display a confirm message after adding new applicant
 function confirm(){
-    document.getElementById('confirmMsg').innerHTML = "Added" + applicantName.value;
+    document.getElementById('confirmMsg').innerHTML = "Added " + applicantName.value + " as new applicant";
 }
