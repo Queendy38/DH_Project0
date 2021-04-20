@@ -28,16 +28,16 @@
               //mydata.team[0].attributes[0].endurance
             currentAppName.push(mydata.applicants[i].name);
             it.push(mydata.applicants[i].attributes[0].intelligence); //scale to 20% 
-            en.push(mydata.applicants[i].attributes[0].endurance); //scale to 30%
+            en.push(mydata.applicants[i].attributes[0].endurance); //scale to 40%
             strength.push(mydata.applicants[i].attributes[0].strength); //scale to 30%
             spicy.push(mydata.applicants[i].attributes[0].spicyFoodTolerance); //scale to 10%
         } 
          
         //display data from JSON
-        document.getElementById('demo').innerHTML = mydata;
+        document.getElementById('demo').innerHTML = JSON.stringify(mydata);
         document.getElementById('demo2').innerHTML = currentAppName[0];
         console.log("current team members");
-        console.log(mydata);
+        console.log(JSON.stringify(mydata));
        // document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
 
 
@@ -74,11 +74,14 @@ function confirm(){
 }
 
 function calculate(it, str, en, spicy){
-  var score;
+  var score, finalScore;
 
-  score = it + str + en + spicy;
+  //apply scales
+  score = (it * 0.2) + (str * 0.3) + (en * 0.4) + (spicy * 0.1);
+  //convert to 0-1 scale
+  finalScore = score * (0.2);
 
-  return score;
+  return finalScore;
 }
 //read iuput from html + exisiting input, show in console
 //output json in console
