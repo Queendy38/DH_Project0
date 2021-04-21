@@ -23,17 +23,17 @@
         //store value in array
         //calculate total score
           if (it[i].checked) {
-              itArr.push(it[i]);
-              itNum = calculate(it[i], 0, 0, 0);
+              itArr.push(it[i].value);
+              itNum = calculate(it[i].value, 0, 0, 0);
           } else if (str[i].checked) {
-              strengthArr.push(str[i]);
-              strNum = calculate(0, str[i], 0, 0);
+              strengthArr.push(str[i].value);
+              strNum = calculate(0, str[i].value, 0, 0);
           } else if (en[i].checked) {
-              enArr.push(en[i]);
-              enNum = calculate(0, 0, en[i], 0);
+              enArr.push(en[i].value);
+              enNum = calculate(0, 0, en[i].value, 0);
           } else if (spicy[i].checked) {
-              spicyArr.push(spicy[i]);
-              spicyNum = calculate(0, 0, 0, spicy[i]);
+              spicyArr.push(spicy[i].value);
+              spicyNum = calculate(0, 0, 0, spicy[i].value);
           }
       }
       currentAppName.push(nameApp); //add name to applicant
