@@ -18,7 +18,7 @@
       var str = document.getElementsByName('score2');
       var en = document.getElementsByName('score3');
       var spicy = document.getElementsByName('score4');
-      var itNum, strNum, enNum, spicyNum;
+      
       for (i = 0; i < 4; i++) { //4 attributes
           //store value in array
           //calculate total score
