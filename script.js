@@ -83,10 +83,6 @@
           // document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
           //display team members
            
-          console.log("Scored applicants");
-          console.log(JSON.stringify(scoredApp, null, 4));
-          console.log("Lists of applicants");
-          console.log(JSON.stringify(app, null, 4));
 
 
       }
@@ -107,4 +103,7 @@
       return finalScore.toFixed(2); //fix to 2 decimal places
   }
 
-  
+          console.log("Scored applicants");
+          console.log(JSON.stringify(scoredApp, null, 4));
+          console.log("Lists of applicants");
+          console.log(JSON.stringify(app, null, 4));
