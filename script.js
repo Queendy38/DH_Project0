@@ -42,7 +42,7 @@
       scoredApp.push({name: nameApp.value,
         score: sum}) //add (namae+score) to scored applicantobject
     //add new appicants to exisiting applicants
-      app.push({name: nameApp.value, attributes: {intelligence: itArr[i], endurance: enArr[i], strength: strengthArr[i], spicyFoodTolerance: spicyArr[i]}});
+      app.push({name: nameApp.value, attributes: {intelligence: itNum, endurance: enNum, strength: strNum, spicyFoodTolerance: spicyNum}});
         document.getElementById('confirmMsg').innerHTML = "Total " + sum + " points";
         document.getElementById('applicants').innerHTML =  currentAppName;
         document.getElementById('Scored').innerHTML =  JSON.stringify(scoredApp, null, 4);
