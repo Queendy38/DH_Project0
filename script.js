@@ -39,7 +39,7 @@
 
       currentAppName.push(nameApp.value); //add name to applicant
       //calculate sum based on name index
-      sum = calculate(itArr[currentAppName.indexOf(nameApp.value)], strengthArr[currentAppName.indexOf(nameApp.value)], enArr[currentAppName.indexOf(nameApp.value)], spicyArr[currentAppName.indexOf(nameApp.value)]); //calculate applicant scores
+      sum = calculate(itArr[currentAppName.lastIndexOf(nameApp.value)], strengthArr[currentAppName.lastIndexOf(nameApp.value)], enArr[currentAppName.lastIndexOf(nameApp.value)], spicyArr[currentAppName.lastIndexOf(nameApp.value)]); //calculate applicant scores
   scoredApp.push({
       name: nameApp.value,
       score: sum
@@ -48,10 +48,10 @@
   app.push({
       name: nameApp.value,
       attributes: {
-          intelligence: itArr[currentAppName.indexOf(nameApp.value)],
-          endurance: enArr[currentAppName.indexOf(nameApp.value)],
-          strength: strengthArr[currentAppName.indexOf(nameApp.value)],
-          spicyFoodTolerance: spicyArr[currentAppName.indexOf(nameApp.value)]
+          intelligence: itArr[currentAppName.lastIndexOf(nameApp.value)],
+          endurance: enArr[currentAppName.lastIndexOf(nameApp.value)],
+          strength: strengthArr[currentAppName.lastIndexOf(nameApp.value)],
+          spicyFoodTolerance: spicyArr[currentAppName.lastIndexOf(nameApp.value)]
       }
   });
   document.getElementById('confirmMsg').innerHTML = "Total " + sum + " points";
