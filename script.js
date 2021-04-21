@@ -36,7 +36,7 @@
           }
       }
       currentAppName.push(nameApp); //add name to applicant
-      sum = it + str + en + spicy; //calculate applicant scores
+      sum = itNum + strNum + enNum + spicyNum; //calculate applicant scores
       scoredApp.push({name: nameApp,
         score: sum}) //add (namae+score) to scored applicantobject
         document.getElementById('confirmMsg').innerHTML = "Total " + sum + " points";
