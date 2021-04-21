@@ -41,6 +41,8 @@
       sum = parseInt(itNum) + parseInt(strNum) + parseInt(enNum) + parseInt(spicyNum); //calculate applicant scores
       scoredApp.push({name: nameApp.value,
         score: sum}) //add (namae+score) to scored applicantobject
+    //add new appicants to exisiting applicants
+      app.push({name: nameApp.value, attributes: {intelligence: itArr[i], endurance: enArr[i], strength: strengthArr[i], spicyFoodTolerance: spicyArr[i]}});
         document.getElementById('confirmMsg').innerHTML = "Total " + sum + " points";
         document.getElementById('applicants').innerHTML =  currentAppName;
         document.getElementById('Scored').innerHTML =  JSON.stringify(scoredApp, null, 4);
@@ -65,7 +67,6 @@
 
               //calculate score
               score.push(calculate(itArr[i], strengthArr[i], enArr[i], spicyArr[i]));
-              //scoredApp.push({name: currentAppName[i], score: score[i]});
           }
 
           //add scored applicants to mydata(JSON)
