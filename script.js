@@ -25,7 +25,7 @@
               itArr.push(it[i]);
               itNum = calculate(it[i], 0, 0, 0);
           } else if (str[i].checked) {
-              strArr.push(str[i]);
+              strengthArr.push(str[i]);
               strNum = calculate(0, str[i], 0, 0);
           } else if (en[i].checked) {
               enArr.push(en[i]);
