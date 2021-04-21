@@ -50,7 +50,7 @@
       attributes: {
           intelligence: itArr[currentAppName.indexOf(nameApp.value)],
           endurance: enArr[currentAppName.indexOf(nameApp.value)],
-          strength: strArr[currentAppName.indexOf(nameApp.value)],
+          strength: strengthArr[currentAppName.indexOf(nameApp.value)],
           spicyFoodTolerance: spicyArr[currentAppName.indexOf(nameApp.value)]
       }
   });
