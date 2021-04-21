@@ -3,7 +3,7 @@
   var url = "input.json";
   var scoredApp = []; //object with existing applicants info (name + score)
   var score = []; //individual score
-  //attributes for all applicants
+  //store different attribute for applicants
   var itArr = [];
   var enArr = [];
   var strengthArr = [];
@@ -19,6 +19,8 @@
     var spicy = document.getElementsByName('score4');
       var sum, itNum, strNum, enNum, spicyNum;
       for (i = 0; i < 4; i++) { //4 attributes
+        //store value in array
+        //calculate total score
           if (it[i].checked) {
               itArr.push(it[i]);
               itNum = calculate(it[i], 0, 0, 0);
@@ -29,7 +31,7 @@
               enArr.push(en[i]);
               enNum = calculate(0, 0, en[i], 0);
           } else if (spicy[i].checked) {
-              spicyNum.push(spicyNum[i]);
+              spicyArr.push(spicy[i]);
               spicyNum = calculate(0, 0, 0, spicy[i]);
           }
       }
