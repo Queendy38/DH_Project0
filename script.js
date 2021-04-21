@@ -81,6 +81,10 @@
           }
        
 
+          console.log("Scored applicants");
+          console.log(JSON.stringify(scoredApp));
+          console.log("Lists of applicants");
+          console.log(JSON.stringify(app));
       }
   };
 
@@ -98,8 +102,3 @@
 
       return finalScore.toFixed(2); //fix to 2 decimal places
   }
-
-          console.log("Scored applicants");
-          console.log(JSON.stringify(scoredApp));
-          console.log("Lists of applicants");
-          console.log(JSON.stringify(app));
