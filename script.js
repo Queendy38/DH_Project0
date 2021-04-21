@@ -39,7 +39,7 @@
       sum = it + str + en + spicy; //calculate applicant scores
       scoredApp.push({name: nameApp,
         score: sum}) //add (namae+score) to scored applicantobject
-      
+        document.getElementById('confirmMsg').innerHTML = "Total " + sum + " points";
   }
 
   //check status
@@ -102,7 +102,5 @@
 
       return finalScore.toFixed(2); //fix to 2 decimal places
   }
-
-  document.getElementById('confirmMsg').innerHTML = "Total " + sum + " points";
 
   
