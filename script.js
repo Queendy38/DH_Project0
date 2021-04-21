@@ -39,7 +39,7 @@
 
       currentAppName.push(nameApp.value); //add name to applicant
       //calculate sum based on name index
-      sum = calculate(itArr[currentAppName.findIndex(nameApp.value)], strengthArr[currentAppName.findIndex(nameApp.value)], enArr[currentAppName.findIndex(nameApp.value)], spicyArr[currentAppName.findIndex(nameApp.value)]); //calculate applicant scores
+      sum = calculate(itArr[currentAppName.indexOf(nameApp.value)], strengthArr[currentAppName.indexOf(nameApp.value)], enArr[currentAppName.indexOf(nameApp.value)], spicyArr[currentAppName.indexOf(nameApp.value)]); //calculate applicant scores
   scoredApp.push({
       name: nameApp.value,
       score: sum
@@ -48,10 +48,10 @@
   app.push({
       name: nameApp.value,
       attributes: {
-          intelligence: itArr[currentAppName.findIndex(nameApp.value)],
-          endurance: enArr[currentAppName.findIndex(nameApp.value)],
-          strength: strArr[currentAppName.findIndex(nameApp.value)],
-          spicyFoodTolerance: spicyArr[currentAppName.findIndex(nameApp.value)]
+          intelligence: itArr[currentAppName.indexOf(nameApp.value)],
+          endurance: enArr[currentAppName.indexOf(nameApp.value)],
+          strength: strArr[currentAppName.indexOf(nameApp.value)],
+          spicyFoodTolerance: spicyArr[currentAppName.indexOf(nameApp.value)]
       }
   });
   document.getElementById('confirmMsg').innerHTML = "Total " + sum + " points";
@@ -123,7 +123,3 @@
       return finalScore.toFixed(2); //fix to 2 decimal places
   }
 
-  console.log("Scored applicants");
-  console.log(JSON.stringify(scoredApp));
-  console.log("Lists of applicants");
-  console.log(JSON.stringify(app));
