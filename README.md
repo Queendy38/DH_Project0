@@ -4,3 +4,4 @@
 # Click on "Add Appplicant"
 # "Total Applicants" displays all applicants from JSON file (input.json) and new applicant created using the button
 # "Scored Applicants" shows all applicants' scores
+# Console log contains the formatted JSON 
