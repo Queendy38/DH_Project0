@@ -42,8 +42,8 @@
       scoredApp.push({name: nameApp.value,
         score: sum}) //add (namae+score) to scored applicantobject
         document.getElementById('confirmMsg').innerHTML = "Total " + sum + " points";
-        document.getElementById('applicants').innerHTML = "Name " + currentAppName;
-        document.getElementById('Scored').innerHTML = "Score " + JSON.stringify(scoredApp, null, 4);
+        document.getElementById('applicants').innerHTML =  currentAppName;
+        document.getElementById('Scored').innerHTML =  JSON.stringify(scoredApp, null, 4);
   }
 
   //check status
