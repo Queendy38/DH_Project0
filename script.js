@@ -84,7 +84,7 @@
           console.log("Scored applicants");
           console.log(JSON.stringify(scoredApp, null, 4));
           console.log("Lists of applicants");
-          console.log(JSON.stringify(mydata.applicants, null, 4));
+          console.log(JSON.stringify(app, null, 4));
 
 
       }
