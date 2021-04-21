@@ -38,7 +38,7 @@
       }
       
       currentAppName.push(nameApp.value); //add name to applicant
-      parseInt(sum) = parseInt(itNum) + parseInt(strNum) + parseInt(enNum) + parseInt(spicyNum); //calculate applicant scores
+      sum = Number(itNum + strNum + enNum + spicyNum); //calculate applicant scores
       scoredApp.push({name: nameApp.value,
         score: sum}) //add (namae+score) to scored applicantobject
     //add new appicants to exisiting applicants
