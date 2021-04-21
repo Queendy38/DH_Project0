@@ -24,21 +24,21 @@
         //calculate total score
           if (it[i].checked) {
               itArr.push(it[i].value);
-              itNum = calculate(it[i].value, 0, 0, 0);
+              itNum = calculate(Number(it[i].value), 0, 0, 0);
           } else if (str[i].checked) {
               strengthArr.push(str[i].value);
-              strNum = calculate(0, str[i].value, 0, 0);
+              strNum = calculate(0, Number(str[i].value), 0, 0);
           } else if (en[i].checked) {
               enArr.push(en[i].value);
-              enNum = calculate(0, 0, en[i].value, 0);
+              enNum = calculate(0, 0, Number(en[i].value), 0);
           } else if (spicy[i].checked) {
               spicyArr.push(spicy[i].value);
-              spicyNum = calculate(0, 0, 0, spicy[i].value);
+              spicyNum = calculate(0, 0, 0, Number(spicy[i].value));
           }
       }
       
       currentAppName.push(nameApp.value); //add name to applicant
-      sum = Number(itNum + strNum + enNum + spicyNum); //calculate applicant scores
+      sum = itNum + strNum + enNum + spicyNum; //calculate applicant scores
       scoredApp.push({name: nameApp.value,
         score: sum}) //add (namae+score) to scored applicantobject
     //add new appicants to exisiting applicants
