@@ -47,10 +47,10 @@
       if (this.readyState == 4 && this.status == 200) {
           var mydata = JSON.parse(this.responseText);
 
-          //load content from JSON to array
+         /* //load content from JSON to array
           for (var i = 0; i < mydata.team.length; i++) {
               currentTeamName.push(mydata.team[i].name);
-          }
+          }*/
 
           for (var i = 0; i < mydata.applicants.length; i++) {
               currentAppName.push(mydata.applicants[i].name);
