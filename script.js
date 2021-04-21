@@ -2,6 +2,7 @@
   var xmlhttp = new XMLHttpRequest();
   var url = "input.json";
   var scoredApp = []; //object with existing applicants info (name + score)
+  var app =[]; //object with all attributes (intelligence, strength,..)
   var score = []; //individual score
   //store different attribute for applicants
   var itArr = [];
@@ -65,11 +66,12 @@
           }
 
           //add scored applicants to mydata(JSON)
-          for (var i = 0; i < itArr.length; i++) {
+          for (var i = 0; i < currentAppName.length; i++) {
               scoredApp.push({
                   name: currentAppName[i],
                   score: score[i]
               });
+              app.push({name: currentAppName[i], attributes:{intelligence: itArr[i], endurance: enArr[i], strength: strengthArr[i], spicyFoodTolerance: spicyArr[i]}});
           }
           // mydata.applicants.push({name: "yolo", attributes: {strength:strength[0]}});
           //display data from JSON
@@ -78,7 +80,7 @@
 
           // document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
           //display team members
-
+           
           console.log("Scored applicants");
           console.log(JSON.stringify(scoredApp, null, 4));
           console.log("Lists of applicants");
