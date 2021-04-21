@@ -2,7 +2,7 @@
   var xmlhttp = new XMLHttpRequest();
   var url = "input.json";
   var scoredApp = []; //object with existing applicants info (name + score)
-  var app =[]; //object with all attributes (intelligence, strength,..)
+  var app = []; //object with all attributes (intelligence, strength,..)
   var score = []; //individual score
   //store different attribute for applicants
   var itArr = [];
@@ -13,40 +13,51 @@
   var sum; //total score of new applicants
   //get score for new applicants
   function confirm() {
-    var nameApp = document.getElementById('applicantName');
-    var it = document.getElementsByName('score1');
-    var str = document.getElementsByName('score2');
-    var en = document.getElementsByName('score3');
-    var spicy = document.getElementsByName('score4');
+      var nameApp = document.getElementById('applicantName');
+      var it = document.getElementsByName('score1');
+      var str = document.getElementsByName('score2');
+      var en = document.getElementsByName('score3');
+      var spicy = document.getElementsByName('score4');
       var itNum, strNum, enNum, spicyNum;
       for (i = 0; i < 4; i++) { //4 attributes
-        //store value in array
-        //calculate total score
+          //store value in array
+          //calculate total score
           if (it[i].checked) {
               itArr.push(it[i].value);
-              itNum = calculate(Number.parseInt(it[i].value), 0, 0, 0);
+              //itNum = calculate(Number.parseInt(it[i].value), 0, 0, 0);
           } else if (str[i].checked) {
               strengthArr.push(str[i].value);
-              strNum = calculate(0, Number.parseInt(str[i].value), 0, 0);
+              // strNum = calculate(0, Number.parseInt(str[i].value), 0, 0);
           } else if (en[i].checked) {
               enArr.push(en[i].value);
-              enNum = calculate(0, 0, Number.parseInt(en[i].value), 0);
+              // enNum = calculate(0, 0, Number.parseInt(en[i].value), 0);
           } else if (spicy[i].checked) {
               spicyArr.push(spicy[i].value);
-              spicyNum = calculate(0, 0, 0, Number.parseInt(spicy[i].value));
+              // spicyNum = calculate(0, 0, 0, Number.parseInt(spicy[i].value));
           }
       }
-      
+
       currentAppName.push(nameApp.value); //add name to applicant
-      sum = itNum + strNum + enNum + spicyNum; //calculate applicant scores
-      scoredApp.push({name: nameApp.value,
-        score: sum}) //add (namae+score) to scored applicantobject
-    //add new appicants to exisiting applicants
-      app.push({name: nameApp.value, attributes: {intelligence: itArr[findIndex(nameApp.value)], endurance: enArr[findIndex(nameApp.value)], strength: strArr[findIndex(nameApp.value)], spicyFoodTolerance: spicyArr[findIndex(nameApp.value)]}});
-        document.getElementById('confirmMsg').innerHTML = "Total " + sum + " points";
-        document.getElementById('applicants').innerHTML =  currentAppName;
-        //document.getElementById('Scored').innerHTML =  JSON.stringify(scoredApp, null, 4);
-        document.getElementById('Scored').innerHTML =  JSON.stringify(app, null, 4);
+      //calculate sum based on name index
+      sum = calculate(itArr[findIndex(nameApp.value)], strArr[findIndex(nameApp.value)], enArr[findIndex(nameApp.value)], spicyArr[findIndex(nameApp.value)]); //calculate applicant scores
+  scoredApp.push({
+      name: nameApp.value,
+      score: sum
+  }) //add (namae+score) to scored applicantobject
+  //add new appicants to exisiting applicants
+  app.push({
+      name: nameApp.value,
+      attributes: {
+          intelligence: itArr[findIndex(nameApp.value)],
+          endurance: enArr[findIndex(nameApp.value)],
+          strength: strArr[findIndex(nameApp.value)],
+          spicyFoodTolerance: spicyArr[findIndex(nameApp.value)]
+      }
+  });
+  document.getElementById('confirmMsg').innerHTML = "Total " + sum + " points";
+  document.getElementById('applicants').innerHTML = currentAppName;
+  //document.getElementById('Scored').innerHTML =  JSON.stringify(scoredApp, null, 4);
+  document.getElementById('Scored').innerHTML = JSON.stringify(app, null, 4);
 
   }
 
@@ -55,10 +66,10 @@
       if (this.readyState == 4 && this.status == 200) {
           var mydata = JSON.parse(this.responseText);
 
-         /* //load content from JSON to array
-          for (var i = 0; i < mydata.team.length; i++) {
-              currentTeamName.push(mydata.team[i].name);
-          }*/
+          /* //load content from JSON to array
+           for (var i = 0; i < mydata.team.length; i++) {
+               currentTeamName.push(mydata.team[i].name);
+           }*/
 
           for (var i = 0; i < mydata.applicants.length; i++) {
               currentAppName.push(mydata.applicants[i].name);
@@ -77,10 +88,18 @@
                   name: currentAppName[i],
                   score: score[i]
               });
-          //update applicants list
-              app.push({name: currentAppName[i], attributes:{intelligence: itArr[i], endurance: enArr[i], strength: strengthArr[i], spicyFoodTolerance: spicyArr[i]}});
+              //update applicants list
+              app.push({
+                  name: currentAppName[i],
+                  attributes: {
+                      intelligence: itArr[i],
+                      endurance: enArr[i],
+                      strength: strengthArr[i],
+                      spicyFoodTolerance: spicyArr[i]
+                  }
+              });
           }
-       
+
 
           console.log("Scored applicants");
           console.log(JSON.stringify(scoredApp));
