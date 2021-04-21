@@ -1,8 +1,13 @@
   //create xmlhttprequest
   var xmlhttp = new XMLHttpRequest();
   var url = "input.json";
-  var scoredApp =[]; //object with existing applicants info (name + score)
+  var scoredApp = []; //object with existing applicants info (name + score)
   var score = []; //individual score
+  //input values
+  var it = document.getElementsByName('score1');
+  var str = document.getElementsByName('score2');
+  var en = document.getElementsByName('score3');
+  var spicy = document.getElementsByName('score4');
 
   //check status
   xmlhttp.onreadystatechange = function () {
@@ -10,7 +15,7 @@
           var mydata = JSON.parse(this.responseText);
 
           var currentAppName = []; //array to store applicants
-          var currentTeamName = []; //array to store member in team
+          // var currentTeamName = []; //array to store member in team
 
           //attributes for all applicants
           var it = [];
@@ -50,7 +55,7 @@
           // document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
           //display team members
 
-          console.log("Lists of team members");
+          console.log("Scored applicants");
           console.log(JSON.stringify(scoredApp, null, 4));
           console.log("Lists of applicants");
           console.log(JSON.stringify(mydata.applicants, null, 4));
@@ -64,38 +69,42 @@
 
   //score values in json arrays
   function confirm() {
-      var ele = document.getElementsByName('score4');
+    var sum;
+      for (i = 0; i < 4; i++) { //4 attributes
+          if (it[i].checked) {
+              it = calculate(it[i], 0, 0, 0);
+          } else if (str[i].checked) {
+              str = calculate(0, str[i], 0, 0);
+          } else if (en[i].checked) {
+              en = calculate(0, 0, en[i], 0);
+          } else if (spicy[i].checked) {
+              spicy = calculate(0, 0, 0, spicy[i]);
+          }
+      }
+      sum = it + str + en + spicy;
+    }
 
-      for (i = 0; i < ele.length; i++) {
-          if (ele[i].checked)
-              document.getElementById("demo").innerHTML = "Selected: " + ele[i].value;
+      //calculate score
+      function calculate(it, str, en, spicy) {
+          var score, finalScore;
+
+          //apply scales
+          score = (it * 0.2) + (str * 0.3) + (en * 0.4) + (spicy * 0.1);
+          //convert to 0-1 scale
+          finalScore = score * (0.2);
+
+          return finalScore.toFixed(2); //fix to 2 decimal places
+      }
+      //read iuput from html + exisiting input, show in console
+      
+      document.getElementById('confirmMsg').innerHTML = "Total " + sum + " points";
+
+      /*//click to display info from JSON
+      function displayTeam() {
+          document.getElementById('team'), innerHTML = JSON.stringify(appObj.scoredApp, null, 10);
       }
 
-      document.getElementById('confirmMsg').innerHTML = "Added " + applicantName.value + " as new applicant";
+      function displayApp() {
+          document.getElementById('app'), innerHTML = JSON.stringify(appObj.team, null, 10);
 
-  }
-
-
-  //calculate score
-  function calculate(it, str, en, spicy) {
-      var score, finalScore;
-
-      //apply scales
-      score = (it * 0.2) + (str * 0.3) + (en * 0.4) + (spicy * 0.1);
-      //convert to 0-1 scale
-      finalScore = score * (0.2);
-
-      return finalScore.toFixed(2); //fix to 2 decimal places
-  }
-  //read iuput from html + exisiting input, show in console
-
-
-  /*//click to display info from JSON
-  function displayTeam() {
-      document.getElementById('team'), innerHTML = JSON.stringify(appObj.scoredApp, null, 10);
-  }
-
-  function displayApp() {
-      document.getElementById('app'), innerHTML = JSON.stringify(appObj.team, null, 10);
-
-  }*/
+      }*/
