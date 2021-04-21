@@ -3,25 +3,47 @@
   var url = "input.json";
   var scoredApp = []; //object with existing applicants info (name + score)
   var score = []; //individual score
-  //input values
-  var it = document.getElementsByName('score1');
-  var str = document.getElementsByName('score2');
-  var en = document.getElementsByName('score3');
-  var spicy = document.getElementsByName('score4');
+  //attributes for all applicants
+  var itArr = [];
+  var enArr = [];
+  var strengthArr = [];
+  var spicyArr = [];
+  var currentAppName = [];
+ 
+  //get score for new applicants
+  function confirm() {
+    var nameApp = document.getElementById('applicantName');
+    var it = document.getElementsByName('score1');
+    var str = document.getElementsByName('score2');
+    var en = document.getElementsByName('score3');
+    var spicy = document.getElementsByName('score4');
+      var sum, itNum, strNum, enNum, spicyNum;
+      for (i = 0; i < 4; i++) { //4 attributes
+          if (it[i].checked) {
+              itArr.push(it[i]);
+              itNum = calculate(it[i], 0, 0, 0);
+          } else if (str[i].checked) {
+              strArr.push(str[i]);
+              strNum = calculate(0, str[i], 0, 0);
+          } else if (en[i].checked) {
+              enArr.push(en[i]);
+              enNum = calculate(0, 0, en[i], 0);
+          } else if (spicy[i].checked) {
+              spicyNum.push(spicyNum[i]);
+              spicyNum = calculate(0, 0, 0, spicy[i]);
+          }
+      }
+      currentAppName.push(nameApp); //add name to applicant
+      sum = it + str + en + spicy; //calculate applicant scores
+      scoredApp.push({name: nameApp,
+        score: sum}) //add (namae+score) to scored applicantobject
+      return sum;
+  }
 
   //check status
   xmlhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
           var mydata = JSON.parse(this.responseText);
-
-          var currentAppName = []; //array to store applicants
-          // var currentTeamName = []; //array to store member in team
-
-          //attributes for all applicants
-          var it = [];
-          var en = [];
-          var strength = [];
-          var spicy = [];
 
           //load content from JSON to array
           for (var i = 0; i < mydata.team.length; i++) {
@@ -30,13 +52,13 @@
 
           for (var i = 0; i < mydata.applicants.length; i++) {
               currentAppName.push(mydata.applicants[i].name);
-              it.push(mydata.applicants[i].attributes[0].intelligence); //scale to 20% 
-              en.push(mydata.applicants[i].attributes[0].endurance); //scale to 40%
-              strength.push(mydata.applicants[i].attributes[0].strength); //scale to 30%
-              spicy.push(mydata.applicants[i].attributes[0].spicyFoodTolerance); //scale to 10%
+              itArr.push(mydata.applicants[i].attributes[0].intelligence); //scale to 20% 
+              enArr.push(mydata.applicants[i].attributes[0].endurance); //scale to 40%
+              strengthArr.push(mydata.applicants[i].attributes[0].strength); //scale to 30%
+              spicyArr.push(mydata.applicants[i].attributes[0].spicyFoodTolerance); //scale to 10%
 
               //calculate score
-              score.push(calculate(it[i], strength[i], en[i], spicy[i]));
+              score.push(calculate(itArr[i], strengthArr[i], enArr[i], spicyArr[i]));
               //scoredApp.push({name: currentAppName[i], score: score[i]});
           }
 
@@ -67,44 +89,18 @@
   xmlhttp.open("GET", url, true);
   xmlhttp.send();
 
-  //score values in json arrays
-  function confirm() {
-    var sum;
-      for (i = 0; i < 4; i++) { //4 attributes
-          if (it[i].checked) {
-              it = calculate(it[i], 0, 0, 0);
-          } else if (str[i].checked) {
-              str = calculate(0, str[i], 0, 0);
-          } else if (en[i].checked) {
-              en = calculate(0, 0, en[i], 0);
-          } else if (spicy[i].checked) {
-              spicy = calculate(0, 0, 0, spicy[i]);
-          }
-      }
-      sum = it + str + en + spicy;
-    }
+  //calculate score
+  function calculate(it, str, en, spicy) {
+      var score, finalScore;
 
-      //calculate score
-      function calculate(it, str, en, spicy) {
-          var score, finalScore;
+      //apply scales
+      score = (it * 0.2) + (str * 0.3) + (en * 0.4) + (spicy * 0.1);
+      //convert to 0-1 scale
+      finalScore = score * (0.2);
 
-          //apply scales
-          score = (it * 0.2) + (str * 0.3) + (en * 0.4) + (spicy * 0.1);
-          //convert to 0-1 scale
-          finalScore = score * (0.2);
+      return finalScore.toFixed(2); //fix to 2 decimal places
+  }
 
-          return finalScore.toFixed(2); //fix to 2 decimal places
-      }
-      //read iuput from html + exisiting input, show in console
-      
-      document.getElementById('confirmMsg').innerHTML = "Total " + sum + " points";
+  document.getElementById('confirmMsg').innerHTML = "Total " + sum + " points";
 
-      /*//click to display info from JSON
-      function displayTeam() {
-          document.getElementById('team'), innerHTML = JSON.stringify(appObj.scoredApp, null, 10);
-      }
-
-      function displayApp() {
-          document.getElementById('app'), innerHTML = JSON.stringify(appObj.team, null, 10);
-
-      }*/
+  
