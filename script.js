@@ -24,16 +24,16 @@
         //calculate total score
           if (it[i].checked) {
               itArr.push(it[i].value);
-              itNum = calculate(Number(it[i].value), 0, 0, 0);
+              itNum = calculate(Number.parseInt(it[i].value), 0, 0, 0);
           } else if (str[i].checked) {
               strengthArr.push(str[i].value);
-              strNum = calculate(0, Number(str[i].value), 0, 0);
+              strNum = calculate(0, Number.parseInt(str[i].value), 0, 0);
           } else if (en[i].checked) {
               enArr.push(en[i].value);
-              enNum = calculate(0, 0, Number(en[i].value), 0);
+              enNum = calculate(0, 0, Number.parseInt(en[i].value), 0);
           } else if (spicy[i].checked) {
               spicyArr.push(spicy[i].value);
-              spicyNum = calculate(0, 0, 0, Number(spicy[i].value));
+              spicyNum = calculate(0, 0, 0, Number.parseInt(spicy[i].value));
           }
       }
       
