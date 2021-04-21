@@ -9,7 +9,7 @@
   var strengthArr = [];
   var spicyArr = [];
   var currentAppName = [];
- 
+  var sum; //total score of new applicants
   //get score for new applicants
   function confirm() {
     var nameApp = document.getElementById('applicantName');
@@ -17,7 +17,7 @@
     var str = document.getElementsByName('score2');
     var en = document.getElementsByName('score3');
     var spicy = document.getElementsByName('score4');
-      var sum, itNum, strNum, enNum, spicyNum;
+      var itNum, strNum, enNum, spicyNum;
       for (i = 0; i < 4; i++) { //4 attributes
         //store value in array
         //calculate total score
@@ -39,7 +39,7 @@
       sum = it + str + en + spicy; //calculate applicant scores
       scoredApp.push({name: nameApp,
         score: sum}) //add (namae+score) to scored applicantobject
-      return sum;
+      
   }
 
   //check status
