@@ -39,7 +39,7 @@
 
       currentAppName.push(nameApp.value); //add name to applicant
       //calculate sum based on name index
-      sum = calculate(itArr[findIndex(nameApp.value)], strArr[findIndex(nameApp.value)], enArr[findIndex(nameApp.value)], spicyArr[findIndex(nameApp.value)]); //calculate applicant scores
+      sum = calculate(itArr[findIndex(nameApp.value)], strengthArr[findIndex(nameApp.value)], enArr[findIndex(nameApp.value)], spicyArr[findIndex(nameApp.value)]); //calculate applicant scores
   scoredApp.push({
       name: nameApp.value,
       score: sum
