@@ -45,7 +45,9 @@
       app.push({name: nameApp.value, attributes: {intelligence: itNum, endurance: enNum, strength: strNum, spicyFoodTolerance: spicyNum}});
         document.getElementById('confirmMsg').innerHTML = "Total " + sum + " points";
         document.getElementById('applicants').innerHTML =  currentAppName;
-        document.getElementById('Scored').innerHTML =  JSON.stringify(scoredApp, null, 4);
+        //document.getElementById('Scored').innerHTML =  JSON.stringify(scoredApp, null, 4);
+        document.getElementById('Scored').innerHTML =  JSON.stringify(app, null, 4);
+
   }
 
   //check status
