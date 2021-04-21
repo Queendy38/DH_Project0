@@ -75,15 +75,7 @@
               });
               app.push({name: currentAppName[i], attributes:{intelligence: itArr[i], endurance: enArr[i], strength: strengthArr[i], spicyFoodTolerance: spicyArr[i]}});
           }
-          // mydata.applicants.push({name: "yolo", attributes: {strength:strength[0]}});
-          //display data from JSON
-          //document.getElementById('demo').innerHTML = JSON.stringify(mydata);
-          //document.getElementById('demo2').innerHTML = score;
-
-          // document.getElementById('demo').innerHTML = it[0] + " " + en[0] + " " + strength[0] + " " + spicy[0];
-          //display team members
-           
-
+       
 
       }
   };
